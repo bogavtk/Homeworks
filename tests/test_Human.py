@@ -12,11 +12,11 @@ class Test_Human:
         return human
 
     @pytest.fixture()
-    def create_queue(self):
+    def queue(self):
         return Queue()
 
-    def test_need_human(self, person, create_queue):
-        assert person.takeaqueae(create_queue) == person # Нужный ли это человек
+    def test_need_human(self, person, queue):
+        assert person.takeaqueae(queue) == person # Нужный ли это человек
 
     def test_age(self, person):
         assert person.age <= 30   # Человеку меньше 30-ти
